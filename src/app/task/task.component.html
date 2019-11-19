@@ -1,0 +1,102 @@
+<div class="container">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6 memory-div"  >
+          <div class="row" *ngFor="let number of RandomArray" >
+              <div  class="col-md-6 col-lg-6 memory-number" [ngClass]="{'hideClass':isHideNumbers}" >{{ number }}</div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      
+      
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div *ngIf="!isFormVisible" class="maxCount">{{ maxTime }}</div>
+                <div class="maxCount" *ngIf="isFormVisible">
+                  I think its time to Enter Number!!! Go aHead Einstein
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+        </div>
+       
+      
+        <div class="container " *ngIf="isFormVisible">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <form [formGroup]="serviceForm" class="example-form">
+                <div class="form-group">
+                <mat-form-field class="example-full-width">
+                  <input
+                    type="number"
+                    matInput
+                    class="inputNumber"
+                    formControlName="findNumber"
+                    placeholder="Please Enter Full Number To Verify"
+                  />
+                  <mat-error *ngIf="f.findNumber.hasError('required')"
+                  >Please Enter Valid Number</mat-error
+                >
+                <mat-error *ngIf="f.findNumber.hasError('pattern')"
+                  >Number length should not cross more than 9 numbers</mat-error
+                >
+                </mat-form-field>
+                <div class="check-buttons">
+                  <button
+                    mat-raised-button
+                    matTooltip="Click To Verify The Number"
+                    color="primary"
+                    (click)="getMessage(f.findNumber.value)"
+                    [disabled]="!serviceForm.valid"
+                  >
+                    VERIFY
+                  </button>
+                  <button
+                    mat-raised-button
+                    matTooltip="Click To Clear The Number"
+                    color="primary"
+                    (click)="clearNumber()"
+                  >
+                    CLEAR
+                  </button>
+                  <button
+                    mat-raised-button
+                    matTooltip="Click To Exit From App"
+                    style="float: right;"
+                    color="warn"
+                    (click)="exitPage()"
+                  >
+                    EXIT
+                  </button>
+                </div>
+              </div>
+              </form>
+            </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+
+
+          <div class="container" *ngIf="countFlag">
+              <div class="row">
+                  <div class="col-md-4"></div>
+                  <div class="col-md-4">
+                      <div style="margin-top: 115px;">
+                        <mat-card class="mat-class">
+                          <span>YOUR SCORE</span>
+                            <div class="count">{{count}}</div>
+                        </mat-card>
+                      </div>
+                  </div>
+                  <div class="col-md-4"></div>
+              </div>
+          </div>
+
+
+
+        </div>
+      

@@ -1,0 +1,17 @@
+.buttons_container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.close_button{
+    background: url("/assets/close.svg") no-repeat;
+    text-indent: -999999px;
+    border: none;
+    width: 29px;
+}
+
+.buttons {
+    background: #87b1b3 !important;
+}

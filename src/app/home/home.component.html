@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+        <mat-card class="home-card">
+            <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Memory Game</mat-card-title>
+                    <mat-card-subtitle>MIND YOUR OWN GAME</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                    A classic memory game with pairs of matching cards.
+                    
+                    <ul>
+                        <li>Rules:</li>
+                        <li>This Game is test your memory power , what you can observe within 5 seconds of time</li>
+                                <li>so, you can able to see the total number for only 5 seconds</li>
+                                <li>once the timer goes off, you can able to enter the number in the input box and the actual number is not visible</li>
+                               <li>the number must be entered and you can't enter more than 9 numbers</li>
+                                <li>There are Three buttons "Verify", "Clear" and  "Exit"</li>
+                               <li>Verify will be enabled once , you enter a valid number</li>
+                                <li>If you want to clear the number entered, you can click on Clear button</li>
+                                <li>On clicking Exit button , it will take you to Home page.</li>
+                                <li>Once you Enter the correct number , you can see your score increasing starting from 0</li>
+                               <li>If you enter wrong number , you will lose one point from your score , so be careful and MIND YOUR OWN MIND</li>
+                                
+                            </ul>
+                  </mat-card-content>
+
+
+                  <mat-card-actions>
+                        <button mat-raised-button color="primary" matTooltip="Click To Enter the MEMORY GAME"  (click)="goTASK()" >MEMORY GAME</button>
+                      </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
