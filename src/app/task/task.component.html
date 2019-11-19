@@ -2,9 +2,11 @@
         <div class="row">
           <div class="col-md-3"></div>
           <div class="col-md-6 memory-div"  >
-          <div class="row" *ngFor="let number of RandomArray" >
-              <div  class="col-md-6 col-lg-6 memory-number" [ngClass]="{'hideClass':isHideNumbers}" >{{ number }}</div>
+              <div class="row wrap">
+          <div class="col-6 col-md-4 col-lg-4" *ngFor="let number of RandomArray" >
+              <div  class="memory-number" [ngClass]="{'hideClass':isHideNumbers}" >{{ number }}</div>
             </div>
+        </div>
           </div>
           <div class="col-md-3"></div>
         </div>
